@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./conf.d/an/pwa:/etc/nginx/conf.d
+      # - ./conf.d/an:/etc/nginx/conf.d
+      # - ./conf.d/kaput:/etc/nginx/conf.d
+      - ./certs:/etc/nginx/certs
+    networks:
+      - lumyri-network
+
+networks:
+  lumyri-network:
+    external: true
+
+volumes:
+  postgres_data:

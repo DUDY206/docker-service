@@ -1,0 +1,1 @@
+mongosh "mongodb://localhost:27017" --username $MONGO_USER authenticationDatabase $MONGO_DB_NAME
