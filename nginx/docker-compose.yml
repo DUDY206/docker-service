@@ -9,11 +9,11 @@ services:
     volumes:
       # - ./conf.d/lumyri:/etc/nginx/conf.d
       # - ./conf.d/an/pwa:/etc/nginx/conf.d
-      # - ./conf.d/an:/etc/nginx/conf.d
+      - ./conf.d/an:/etc/nginx/conf.d
       # - ./conf.d/kaput:/etc/nginx/conf.d
       # - ./conf.d/kaput/ngrok:/etc/nginx/conf.d
       # - ./conf.d/onyx:/etc/nginx/conf.d
-      - ./conf.d/quiz:/etc/nginx/conf.d
+      # - ./conf.d/quiz:/etc/nginx/conf.d
       - ./log:/var/log/nginx
       - ./certs:/etc/nginx/certs
     networks:
